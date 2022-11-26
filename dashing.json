@@ -1,0 +1,23 @@
+{
+    "name": "Bridgetown",
+    "package": "bt",
+    "index": "docs.html",
+    "selectors": {
+        "h1": {
+            "type":"Guide",
+            "matchpath": "docs/.+\\.html"
+        },
+        "h2": {
+            "type":"Section",
+            "regexp":"#",
+            "replacement":"",
+            "matchpath": "docs/.+\\.html"
+        }
+    },
+    "ignore": [
+        "Table of Contents"
+    ],
+    "icon32x32": "icon.png",
+    "allowJS": false,
+    "ExternalURL": "https://www.bridgetownrb.com/docs/"
+}
