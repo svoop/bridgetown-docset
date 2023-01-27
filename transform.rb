@@ -1,10 +1,14 @@
 #!/usr/bin/env ruby
 
+# href="docs/template-engines/liquid/
+
 {
   '**/*.html' => {
     %r{<nav[> ].*?</nav>}m => '',
     %r{<svg-wrapper[> ].*?</svg-wrapper>}m => '',
-    %r{<footer[> ].*?</footer>}m => ''
+    %r{<footer[> ].*?</footer>}m => '',
+    %r{<p .+?</p>\s*</article>}m => '</article>',
+    %r{href="/docs/([^"]*?)/?(#[^"]*)?"}m => 'href="\1.html\2"'
   },
   '*.html' => {
     '/_bridgetown/static' => '_bridgetown/static'

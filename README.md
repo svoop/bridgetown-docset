@@ -18,7 +18,7 @@ cd source
 git checkout tags/$TAG -b branch-$TAG
 
 # Relax Ruby version
-echo "ruby-3.0" >bridgetown-website/.ruby-version
+echo "ruby-3.2" >bridgetown-website/.ruby-version
 
 # Direnv
 echo "use ruby" >bridgetown-website/.envrc
@@ -31,7 +31,6 @@ bridgetown deploy
 
 # Transform content
 cd output
-find . -name index.html -exec rm {} +
 ../../../transform.rb
 
 # Build docset
