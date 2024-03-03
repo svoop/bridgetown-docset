@@ -6,9 +6,12 @@ No releases yet, there's still too much room for improvements. However, you can 
 
 ## Development
 
-Install [Ruby](https://www.ruby-lang.org) and [Dashing](https://github.com/technosophos/dashing#readme), then...
+Install [Ruby](https://www.ruby-lang.org), then...
 
 ```bash
+# Install tools
+brew install dashing
+
 # Set tag
 TAG=$(cat tag.txt)
 
@@ -18,9 +21,9 @@ cd source
 git checkout tags/$TAG -b branch-$TAG
 
 # Relax Ruby version
-echo "ruby-3.2" >bridgetown-website/.ruby-version
+echo "ruby-3.3" >bridgetown-website/.ruby-version
 
-# Direnv
+# Direnv (if used)
 echo "use ruby" >bridgetown-website/.envrc
 
 # Build website
